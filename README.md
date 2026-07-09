@@ -1,8 +1,6 @@
 # ⚡ Modern Tech Solutions HR Management System
 
-A modern, responsive Human Resource Management System (HRMS) built using **HTML, CSS, and JavaScript**. This project provides a complete HR dashboard for managing employees, payroll, attendance, and leave requests through an intuitive cyberpunk-inspired interface.
-
-The application was converted from a React/Vite project into a standalone HTML/CSS/JavaScript version while maintaining the original functionality and user experience.
+A modern, responsive Human Resource Management System (HRMS) built using **HTML, CSS, and JavaScript**. This project provides a complete HR dashboard for managing employees, payroll, attendance, and leave requests through a simplified user-friendly interface.
 
 ---
 
@@ -10,18 +8,7 @@ The application was converted from a React/Vite project into a standalone HTML/C
 
 Modern Tech Solutions HR Management System is designed to simplify day-to-day HR operations by providing a centralized dashboard where administrators can manage employee information, monitor attendance, process payroll, and review leave requests.
 
-The application stores user sessions using Local Storage and can run entirely on the client side without requiring a backend server.
-
 ---
-
-# ✨ Features
-
-## 🔐 Authentication
-
-* Secure login page
-* Session management using Local Storage
-* Logout functionality
-* Automatic authentication check
 
 ---
 
@@ -33,25 +20,18 @@ The dashboard provides an overview of the organisation including:
 * Payroll summary
 * Attendance overview
 * Pending leave requests
-* Animated statistic cards
-* Interactive SVG charts
-* Recent activity section
 
 ---
 
 ## 👥 Employee Management
 
-Manage employee records with full CRUD functionality.
-
 Features include:
 
-* View employee directory
 * Search employees instantly
 * Filter by department
 * Add new employees
 * Edit employee information
 * Delete employee records
-* Responsive employee table
 
 ---
 
@@ -60,7 +40,6 @@ Features include:
 Payroll tools include:
 
 * Monthly payroll records
-* Filter by month and year
 * Process payroll
 * View payslip modal
 * Payroll summary
@@ -89,34 +68,16 @@ Attendance dashboard includes:
 * Date filtering
 * Status filtering
 * Attendance summary cards
-* Interactive charts
-* Attendance table
-* Export notification
 
 ---
-
-## 📱 Responsive Design
-
-Designed to work across multiple screen sizes.
-
-Includes:
-
-* Desktop sidebar navigation
-* Mobile slide-out menu
-* Responsive layouts
-* Mobile-friendly tables
-* Adaptive cards
-* Smooth animations
 
 ---
 
 # 🛠 Technologies Used
 
-* HTML5
-* CSS3
-* JavaScript (ES6)
-* Local Storage API
-* SVG Charts
+* HTML
+* CSS
+* JavaScript 
 * JSON Data Files
 
 ---
@@ -130,28 +91,6 @@ Password: 57940
 ```
 
 ---
-
-# 🚀 Running the Project
-
-## Option 1 (Recommended)
-
----
-
-
-# 🎨 User Interface
-
-The project features a futuristic cyberpunk design including:
-
-* Neon-inspired colour palette
-* Glassmorphism interface
-* Smooth animations
-* Responsive layouts
-* Interactive cards
-* Modern dashboards
-* Toast notifications
-* Modal windows
-* Custom tables
-* Dynamic charts
 
 ---
 
@@ -180,11 +119,7 @@ Potential enhancements include:
 * Backend database integration
 * User role management
 * Email notifications
-* PDF payslip generation
-* Employee profile photos
 * Dark/Light mode switch
-* Analytics dashboard
-* API integration
 * Cloud deployment
 * Multi-user authentication
 
