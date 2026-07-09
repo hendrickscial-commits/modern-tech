@@ -789,6 +789,12 @@
         font-weight: 600;
       }
 
+      @media (min-width: 769px) {
+        .logout-link-mobile-nav {
+          display: none !important;
+        }
+      }
+
       .logout-link-mobile-nav:hover {
         background: #ffffff;
         color: var(--sidebar-bg);
@@ -999,10 +1005,7 @@
               <i class="fa-solid fa-sign-out-alt"></i>
               <span>Logout</span>
             </a>
-            <div class="date-selector">
-              <label for="daySelector">Date</label>
-              <input type="date" id="daySelector" />
-            </div>
+
             <div class="admin-date" id="currentDate"></div>
           </div>
         </div>
@@ -1012,6 +1015,10 @@
             <div class="header-text">
               <h1>Time Off & Attendance Tracking</h1>
               <p>Monitor hours, leave balances, and requests.</p>
+            </div>
+            <div class="date-selector">
+              <label for="daySelector">Date</label>
+              <input type="date" id="daySelector" />
             </div>
             <button class="btn-primary" id="newRequestBtn" type="button">
               <span>+</span>
