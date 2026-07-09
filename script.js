@@ -3,13 +3,13 @@
 // ===============================
 
 if (!localStorage.getItem("isLoggedIn")) {
-  window.location.href = "login.html";
+  window.location.href = "./index.html";
 }
 
 function logout() {
   localStorage.removeItem("isLoggedIn");
   localStorage.removeItem("userEmail");
-  window.location.href = "login.html";
+  window.location.href = "./index.html";
 }
 
 // ===============================

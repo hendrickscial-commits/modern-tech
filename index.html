@@ -3,367 +3,237 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>ModernTech HR Management</title>
-
+    <title>ModernTech HR - Sign In</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    <link rel="stylesheet" href="style.css" />
+      body {
+        font-family: "Inter", sans-serif;
+        background: #0a2f3f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 16px;
+      }
+
+      .login-container {
+        width: 100%;
+        max-width: 520px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .login-card {
+        background: white;
+        border-radius: 12px;
+        padding: 48px 40px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        text-align: center;
+      }
+
+      .logo {
+        width: 60px;
+        height: 60px;
+        background: #0a2f3f;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0 auto 24px;
+        letter-spacing: 2px;
+      }
+
+      .logo {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .logo-icon {
+        font-size: 22px;
+        color: #38bdf8;
+      }
+
+      .logo h2 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 700;
+        color: #e6f2f8;
+      }
+
+      .logo span {
+        font-size: 12px;
+        color: #b8d6e6;
+        display: block;
+      }
+
+      .title {
+        font-size: 32px;
+        font-weight: 700;
+        color: #0a2f3f;
+        margin-bottom: 8px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+        color: #666666;
+        margin-bottom: 32px;
+      }
+
+      .form-group {
+        margin-bottom: 24px;
+        text-align: left;
+      }
+
+      .form-group label {
+        display: block;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #666666;
+        margin-bottom: 8px;
+        letter-spacing: 0.5px;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 14px 16px;
+        border: none;
+        background: #f0f0f0;
+        border-radius: 8px;
+        font-size: 14px;
+        color: #000000;
+        transition: background 0.2s;
+      }
+
+      .form-group input::placeholder {
+        color: #999999;
+      }
+
+      .form-group input:focus {
+        outline: none;
+        background: #e8e8e8;
+      }
+
+      .btn-signin {
+        width: 100%;
+        padding: 14px 16px;
+        background: #0a2f3f;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+        margin-top: 8px;
+      }
+
+      .btn-signin:hover {
+        background: #222222;
+      }
+
+      .btn-signin:active {
+        background: #000000;
+        transform: scale(0.98);
+      }
+
+      /* Responsive */
+      @media (max-width: 600px) {
+        .login-card {
+          padding: 32px 24px;
+        }
+
+        .title {
+          font-size: 24px;
+        }
+
+        .subtitle {
+          font-size: 14px;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <aside class="sidebar">
-      <div class="mobile-header">
+    <div class="login-container">
+      <div class="login-card">
         <div class="logo">
           <div class="logo-icon">
             <i class="fa-solid fa-building"></i>
           </div>
-
-          <div>
-            <h2>ModernTech</h2>
-            <span>HR Management</span>
-          </div>
         </div>
 
-        <nav>
-          <a href="index.html" class="active">
-            <i class="fa-solid fa-users"></i>
-            <span>Employees Data</span>
-          </a>
+        <h1 class="title">ModernTech HR</h1>
+        <p class="subtitle">Sign in to your HR portal</p>
 
-          <a href="payroll.html">
-            <i class="fa-solid fa-money-check-dollar"></i>
-            <span>Payroll</span>
-          </a>
-
-          <a href="leave.html">
-            <i class="fa-solid fa-calendar-days"></i>
-            <span>Time Off/Attendance</span>
-          </a>
-
-          <a href="performance.html">
-            <i class="fa-solid fa-chart-line"></i>
-            <span>Performance</span>
-          </a>
-        </nav>
-      </div>
-
-      <div class="sidebar-footer">
-        <div class="avatar">AU</div>
-        <div>
-          <h4>Admin User</h4>
-          <p>HR Administrator</p>
-        </div>
-
-        <button class="logout-btn" onclick="logout()">
-          <i class="fa-solid fa-right-from-bracket"></i>
-        </button>
-      </div>
-    </aside>
-
-    <main class="main">
-      <div class="top-navbar">
-        <div class="breadcrumb">
-          <span>ModernTech</span>
-
-          <span>/</span>
-
-          <span>Employee Data</span>
-        </div>
-
-        <div class="admin-section">
-          <div id="currentDate" class="admin-date"></div>
-        </div>
-      </div>
-
-      <section class="hero-banner">
-        <div class="hero-content">
-          <div class="hero-text">
-            <span class="hero-subtitle">
-              MODERNTECH SOLUTIONS • HR MANAGEMENT
-            </span>
-
-            <h1>
-              Smart HR Management
-
-              <br />
-
-              for ModernTech Solutions
-            </h1>
-
-            <p>
-              Centralize employee records, automate payroll, manage attendance
-              and streamline HR operations.
-            </p>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="email">EMAIL ADDRESS</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="admin@moderntech.co.za"
+              required
+            />
           </div>
 
-          <div class="hero-buttons">
-            <button class="btn-primary" onclick="openAddModal()">
-              Add Employee
-            </button>
+          <div class="form-group">
+            <label for="password">PASSWORD</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter password '57940'"
+              required
+            />
           </div>
-        </div>
-      </section>
-
-      <div class="modal" id="addEmployeeModal">
-        <div class="modal-card">
-          <div class="modal-head">
-            <h3>Add New Employee</h3>
-
-            <button class="close" onclick="closeAddModal()">&times;</button>
-          </div>
-
-          <div class="modal-body">
-            <div class="form-grid">
-              <div class="form-group">
-                <label>Full Name</label>
-
-                <input
-                  type="text"
-                  id="employeeName"
-                  placeholder="Enter employee name"
-                />
-              </div>
-
-              <div class="form-group">
-                <label>Email</label>
-
-                <input
-                  type="email"
-                  id="employeeEmail"
-                  placeholder="Enter email"
-                />
-              </div>
-
-              <div class="form-group">
-                <label>Position</label>
-
-                <input type="text" id="employeePosition" />
-              </div>
-
-              <div class="form-group">
-                <label>Department</label>
-
-                <input type="text" id="employeeDepartment" />
-              </div>
-
-              <div class="form-group">
-                <label>Hire Date</label>
-
-                <input type="date" id="employeeHireDate" />
-              </div>
-
-              <div class="form-group">
-                <label>Status</label>
-
-                <select id="employeeStatus">
-                  <option value="Present">Present</option>
-
-                  <option value="Absent">Absent</option>
-                </select>
-              </div>
-
-              <div class="form-group full-width">
-                <label>Employee Photo</label>
-
-                <input type="file" id="employeePhoto" />
-              </div>
-            </div>
-
-            <button class="btn-primary full" onclick="saveEmployee()">
-              Add Employee
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="status-cards">
-        <div class="status-card">
-          <div class="status-label">TOTAL EMPLOYEES</div>
-          <div class="status-number" id="totalCount">10</div>
-        </div>
-
-        <div class="status-card">
-          <div class="status-label">PRESENT</div>
-          <div class="status-number" id="presentCount">9</div>
-        </div>
-
-        <div class="status-card">
-          <div class="status-label">ABSENT</div>
-          <div class="status-number" id="absentCount">1</div>
-        </div>
-      </div>
-
-      <div class="table-wrap">
-        <div class="table-head">
-          <div class="search-section">
-            <input type="text" id="search" placeholder="Search employee..." />
-          </div>
-
-          <div class="filter-buttons" id="filterButtonsContainer">
-            <button class="filter-btn active" data-filter="all">All</button>
-          </div>
-        </div>
-
-        <table id="emTable">
-          <thead>
-            <tr>
-              <th>#</th>
-
-              <th>EMPLOYEE</th>
-
-              <th>DEPARTMENT</th>
-
-              <th>POSITION</th>
-
-              <th>STATUS</th>
-
-              <th>ACTIONS</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <!-- Employees are inserted by JavaScript -->
-          </tbody>
-        </table>
-      </div>
-    </main>
-
-    <div id="profileModal" class="modal">
-      <div class="modal-card profile-card">
-        <header class="modal-head">
-          <div class="profile-header">
-            <img id="mAvatar" src="" alt="Employee Photo" />
-
-            <div>
-              <h2 id="mName"></h2>
-
-              <p id="mPosition"></p>
-            </div>
-          </div>
-
-          <button id="closeBtn" class="close">&times;</button>
-        </header>
-
-        <div class="modal-body">
-          <!-- STATUS TAGS -->
-
-          <div id="mTags" class="tags"></div>
-
-          <div class="stats">
-            <div class="stat-card">
-              <span id="mAtt" class="num"> </span>
-
-              <span class="lbl"> Attendance </span>
-            </div>
-
-            <div class="stat-card">
-              <span id="mPending" class="num"> 1 </span>
-
-              <span class="lbl"> Pending Requests </span>
-            </div>
-
-            <div class="stat-card">
-              <span id="mRating" class="num"> 4.8 </span>
-
-              <span class="lbl"> Performance </span>
-            </div>
-          </div>
-
-          <div id="mInfo" class="info-grid"></div>
-
-          <button
-            class="btn-primary full"
-            onclick="window.location.href = 'leave.html'"
-          >
-            View Attendance & Requests
-          </button>
-        </div>
+          <button type="submit" class="btn-signin">Sign In</button>
+        </form>
       </div>
     </div>
 
-    <div id="editEmployeeModal" class="modal">
-      <div class="modal-card">
-        <div class="modal-head">
-          <h3>Edit Employee</h3>
+    <script>
+      document.getElementById("loginForm").addEventListener("submit", (e) => {
+        e.preventDefault();
 
-          <button class="close" onclick="closeEditModal()">&times;</button>
-        </div>
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
 
-        <div class="modal-body">
-          <div class="form-grid">
-            <div class="form-group">
-              <label>Full Name</label>
+        if (!email || !password) {
+          alert("Please fill in all fields");
+          return;
+        }
 
-              <input type="text" id="editName" />
-            </div>
-
-            <div class="form-group">
-              <label>Email</label>
-
-              <input type="email" id="editEmail" />
-            </div>
-
-            <div class="form-group">
-              <label>Position</label>
-
-              <input type="text" id="editPosition" />
-            </div>
-
-            <div class="form-group">
-              <label>Department</label>
-
-              <input type="text" id="editDepartment" />
-            </div>
-
-            <div class="form-group">
-              <label>Hire Date</label>
-
-              <input type="date" id="editHireDate" />
-            </div>
-
-            <div class="form-group">
-              <label>Status</label>
-
-              <select id="editStatus">
-                <option value="Present">Present</option>
-
-                <option value="Absent">Absent</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label>Salary</label>
-
-              <input type="number" id="editSalary" placeholder="Salary" />
-            </div>
-
-            <div class="form-group full-width">
-              <label>Employment History</label>
-
-              <textarea
-                id="editHistory"
-                rows="4"
-                placeholder="Employment history..."
-              ></textarea>
-            </div>
-          </div>
-
-          <button class="btn-primary full" onclick="updateEmployee()">
-            Save Changes
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <script src="script.js"></script>
+        if (email === "admin@moderntech.co.za" && password === "57940") {
+          localStorage.setItem("isLoggedIn", "true");
+          localStorage.setItem("userEmail", email);
+          window.location.href = "./employees.html";
+        } else {
+          alert("Invalid email or password");
+          document.getElementById("password").value = "";
+        }
+      });
+    </script>
   </body>
 </html>
