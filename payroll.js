@@ -488,7 +488,7 @@ printBtn.addEventListener("click", () => {
 
 function logout() {
 
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 
 }
 
