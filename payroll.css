@@ -33,12 +33,11 @@ body{
 
 .sidebar{
     width:260px;
-    background:var(--sidebar-bg);
-    color:var(--sidebar-text);
+    background:#0a2f3f;
+    color:#e6f2f8;
     padding:20px;
     display:flex;
     flex-direction:column;
-    flex-shrink:0;
 }
 
 .logo{
@@ -85,6 +84,10 @@ nav a:hover,
 nav a.active{
     background:#134a61;
     color:#fff;
+}
+
+.logout-link-mobile-nav{
+    display:none;
 }
 
 .sidebar-footer{
@@ -480,7 +483,6 @@ button:hover{
 
 }
 
-
 @media (max-width:768px){
 
     .container{
@@ -510,7 +512,18 @@ button:hover{
         justify-content:center;
     }
 
+    .logout-link-mobile-nav{
+        display:flex;
+        flex:1 1 160px;
+        justify-content:center;
+        align-items:center;
+    }
+
     .sidebar-footer{
+        display:none;
+    }
+
+    .logout-btn{
         display:none;
     }
 
@@ -557,7 +570,7 @@ button:hover{
 
     .logo{
         justify-content:center;
-        margin-bottom:12px;
+        margin-bottom:10px;
     }
 
     .logo h2{
@@ -575,66 +588,119 @@ button:hover{
     .sidebar nav{
         display:grid;
         grid-template-columns:repeat(4,1fr);
-        gap:6px;
+        gap:5px;
         width:100%;
     }
 
     .sidebar nav a{
         flex:none;
+        display:flex;
+        flex-direction:column;
         justify-content:center;
         align-items:center;
-        padding:10px 4px;
-        font-size:11px;
+        padding:8px 2px;
+        font-size:10px;
         text-align:center;
+        gap:3px;
     }
 
     .sidebar nav a i{
-        display:block;
-        font-size:18px;
-        margin-bottom:4px;
+        font-size:16px;
+        margin:0;
+    }
+
+    .logout-link-mobile-nav{
+        grid-column:1 / -1;
+        flex-direction:row !important;
+        justify-content:center;
+        gap:8px;
+        padding:9px;
+        font-size:12px;
+        margin-top:5px;
+    }
+
+    .logout-link-mobile-nav i{
+        font-size:15px;
     }
 
     .main-content{
-        padding:15px;
+        padding:12px;
     }
 
     .top-navbar{
-        margin-top:45px;
+        margin-top:10px;
+        margin-bottom:15px;
+        padding-bottom:10px;
     }
 
     .breadcrumb{
-        font-size:13px;
-        flex-wrap:wrap;
+        font-size:12px;
     }
 
     .admin-date{
-        font-size:13px;
+        font-size:12px;
+    }
+
+    header{
+        margin-bottom:15px;
     }
 
     header h1{
-        font-size:22px;
+        font-size:21px;
     }
 
     header span{
-        font-size:14px;
+        font-size:13px;
+    }
+
+    .content{
+        gap:12px;
     }
 
     .card,
     .payslip,
     .empty-state{
+        padding:12px;
+        border-radius:12px;
+    }
+
+    .card{
+        margin-bottom:12px;
+    }
+
+    .employee-info{
+        gap:8px;
+        padding:12px;
+        margin-bottom:12px;
+    }
+
+    .salary-section{
+        gap:10px;
+    }
+
+    .earnings,
+    .deductions{
+        padding:12px;
+    }
+
+    .row{
+        margin:7px 0;
+        font-size:13px;
+    }
+
+    .net-pay{
+        margin-top:12px;
         padding:15px;
     }
 
     .net-pay h1{
-        font-size:24px;
+        font-size:23px;
     }
 
-    .row{
-        font-size:14px;
-    }
-
-    .summary-item{
-        font-size:14px;
+    .pdf-btn,
+    .print-btn{
+        padding:11px;
+        margin-top:10px;
     }
 
 }
