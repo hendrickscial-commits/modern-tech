@@ -731,3 +731,4 @@ populateTable(employees);
 updateStatusCounts();
 
 displayCurrentDate();
+
