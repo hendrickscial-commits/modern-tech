@@ -33,11 +33,12 @@ body{
 
 .sidebar{
     width:260px;
-    background:#0a2f3f;
-    color:#e6f2f8;
+    background:var(--sidebar-bg);
+    color:var(--sidebar-text);
     padding:20px;
     display:flex;
     flex-direction:column;
+    flex-shrink:0;
 }
 
 .logo{
