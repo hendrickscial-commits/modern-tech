@@ -775,6 +775,25 @@
         color: var(--gray-900);
       }
 
+      .logout-link-mobile-nav {
+        display: none;
+        align-items: center;
+        gap: 6px;
+        justify-content: center;
+        padding: 10px 12px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--sidebar-muted);
+        text-decoration: none;
+        font-size: 0.8125rem;
+        font-weight: 600;
+      }
+
+      .logout-link-mobile-nav:hover {
+        background: #ffffff;
+        color: var(--sidebar-bg);
+      }
+
       .top-navbar {
         display: flex;
         justify-content: space-between;
@@ -820,112 +839,84 @@
 
         .sidebar {
           width: 100%;
-          flex-direction: row;
-          align-items: center;
-          padding: 12px 16px;
-          overflow-x: auto;
+          height: auto;
+          position: relative;
+          padding: 15px;
         }
 
         .logo {
-          margin-bottom: 0;
-          margin-right: 20px;
+          margin-bottom: 15px;
         }
 
         .sidebar nav {
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
-          gap: 10px;
-          margin-top: 0;
-          align-items: center;
+          justify-content: center;
         }
 
         .sidebar nav a {
-          min-width: 110px;
+          flex: 1 1 160px;
           justify-content: center;
-          padding: 10px 14px;
         }
 
-        .sidebar nav a span {
-          display: none;
+        .logout-link-mobile-nav {
+          display: inline-flex;
+          flex: 1 1 160px;
         }
 
         .sidebar-footer {
           display: none;
         }
-
-        .top-bar {
-          padding: 12px 16px;
-        }
-
-        .logout-link-mobile {
-          display: inline-flex;
-        }
-
-        .main-header {
-          padding: 20px 16px;
-        }
-
-        .header-text h1 {
-          font-size: 1.5rem;
-        }
-
-        .content-wrapper {
-          padding: 16px;
-        }
-
-        .summary-grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 12px;
-        }
-
-        .dashboard-layout {
-          grid-template-columns: 1fr;
-        }
-
-        .employee-sidebar {
-          order: 2;
-        }
-
-        .main-panel {
-          order: 1;
-        }
-
-        .employee-list {
-          max-height: 400px;
-        }
-
-        th,
-        td {
-          padding: 12px 16px;
-        }
-
-        .panel-header {
-          padding: 16px;
-        }
-
-        .tab {
-          padding: 12px 16px;
-        }
       }
 
       @media (max-width: 480px) {
-        .summary-grid {
-          grid-template-columns: 1fr;
+        .sidebar {
+          padding: 10px;
         }
 
-        .header-content {
-          flex-direction: column;
-          align-items: stretch;
-        }
-
-        .btn-primary {
-          width: 100%;
+        .logo {
           justify-content: center;
+          margin-bottom: 12px;
         }
 
-        .date-display {
-          display: none;
+        .logo h2 {
+          font-size: 20px;
+        }
+
+        .logo span {
+          font-size: 12px;
+        }
+
+        .logo-icon {
+          font-size: 20px;
+        }
+
+        .sidebar nav {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 6px;
+          width: 100%;
+        }
+
+        .sidebar nav a {
+          flex: none;
+          justify-content: center;
+          align-items: center;
+          padding: 10px 4px;
+          font-size: 11px;
+          text-align: center;
+        }
+
+        .sidebar nav a i {
+          display: block;
+          font-size: 18px;
+          margin-bottom: 4px;
+        }
+
+        .logout-link-mobile-nav {
+          padding: 10px 4px;
+          font-size: 11px;
         }
       }
 
@@ -962,7 +953,7 @@
         </div>
 
         <nav>
-          <a href="./EmployeesData.html">
+          <a href="./employees.html">
             <i class="fa-solid fa-users"></i>
             <span>Employees Data</span>
           </a>
@@ -978,6 +969,10 @@
             <i class="fa-solid fa-chart-line"></i>
             <span>Performance</span>
           </a>
+          <a href="./index.html" class="logout-link-mobile-nav">
+            <i class="fa-solid fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
         </nav>
 
         <div class="sidebar-footer">
@@ -986,7 +981,7 @@
             <h4>Admin User</h4>
             <p>HR Administrator</p>
           </div>
-          <a href="./login.html" class="logout-btn" title="Logout">
+          <a href="./index.html" class="logout-btn" title="Logout">
             <i class="fa-solid fa-sign-out-alt"></i>
           </a>
         </div>
@@ -1000,7 +995,7 @@
             <span>Time Off</span>
           </div>
           <div class="admin-section">
-            <a href="./login.html" class="logout-link-mobile" title="Logout">
+            <a href="./index.html" class="logout-link-mobile" title="Logout">
               <i class="fa-solid fa-sign-out-alt"></i>
               <span>Logout</span>
             </a>
