@@ -64,13 +64,13 @@ SIDEBAR
   margin: 0;
   font-size: 18px;
   font-weight: 700;
-  color:#e6f2f8;
+  color: #e6f2f8;
 }
 
 .logo span {
   font-size: 12px;
   color: #b8d6e6;
-  display:block;
+  display: block;
 }
 
 nav {
@@ -95,13 +95,13 @@ nav a {
 nav a:hover,
 nav a.active {
   background: #134a61;
-  color:#ffffff;
+  color: #ffffff;
 }
 
 nav a i {
   width: 16px;
   text-align: center;
-  width:20px;
+  width: 20px;
 }
 
 .sidebar-footer {
@@ -151,7 +151,7 @@ nav a i {
 }
 
 .logout-btn:hover {
-  color:#ffffff;
+  color: #ffffff;
 }
 
 /* ==========================
@@ -444,13 +444,13 @@ STATUS BADGES
 }
 
 .badge.present {
-  background:#38BDF8;
-  color:#0A2F3F;
+  background: #38bdf8;
+  color: #0a2f3f;
 }
 
 .badge.absent {
-  background:#E4E4E7;
-  color:#3F3F46;
+  background: #e4e4e7;
+  color: #3f3f46;
 }
 
 /* ==========================
@@ -500,18 +500,18 @@ ACTION BUTTONS
 }
 
 .profile-btn {
-  background:white;
-  color:black;
+  background: white;
+  color: black;
 }
 
 .edit-btn {
-  background:white;
-  color:black;
+  background: white;
+  color: black;
 }
 
 .delete-btn {
-  background:white;
-  color:black;
+  background: white;
+  color: black;
 }
 
 /* ==========================
@@ -815,78 +815,132 @@ MOBILE
     display: block;
   }
 
-  /* Sidebar */
-
   .sidebar {
     width: 100%;
-    padding: 15px;
-  }
-
-  .mobile-header {
+    padding: 20px 12px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
   }
 
+  /* Logo */
+
   .logo {
-    margin-bottom: 0;
-  }
-
-  .logo span {
-    display: none;
-  }
-
-  nav {
-    flex-direction: row;
-    gap: 8px;
-    margin-left: auto;
-  }
-
-  nav a {
-    width: 44px;
-    height: 44px;
+    width: 100%;
     justify-content: center;
-    border-radius: 10px;
-    padding: 0;
+    margin-bottom: 25px;
   }
 
-  nav a span {
-    display: none;
-  }
-
-  nav a i {
-    margin: 0;
+  .logo h2 {
     font-size: 18px;
   }
 
+  .logo span {
+    display: block;
+    font-size: 13px;
+  }
+
+  /* Navigation */
+
+  nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  nav a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+
+    min-height: 70px;
+    padding: 12px 8px;
+
+    border-radius: 14px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #d9edf7;
+  }
+
+  nav a i {
+    font-size: 22px;
+    width: auto;
+  }
+
+  nav a.active {
+    background: #134a61;
+    color: #fff;
+  }
+
+  /* Logout */
+
   .sidebar-footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: none;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .sidebar-footer .avatar,
+  .sidebar-footer h4,
+  .sidebar-footer p {
     display: none;
+  }
+
+  .logout-btn {
+    width: 130px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    background: #134a61;
+    color: #fff;
+
+    border-radius: 14px;
+
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .logout-btn::after {
+    content: "Logout";
+    font-size: 15px;
+    font-weight: 600;
   }
 
   /* Main */
 
   .main {
-    padding: 15px;
+    padding: 18px;
   }
 
   .top-navbar {
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: 10px;
   }
 
   .hero-content {
     flex-direction: column;
-    align-items: flex-start;
     padding: 25px;
+    align-items: flex-start;
   }
 
   .hero-text h1 {
     font-size: 28px;
-  }
-
-  .hero-text p {
-    font-size: 15px;
   }
 
   .hero-buttons {
@@ -897,21 +951,13 @@ MOBILE
     width: 100%;
   }
 
-  /* Status cards */
-
   .status-cards {
     grid-template-columns: 1fr;
   }
 
-  /* Search */
-
   .table-head {
     flex-direction: column;
     align-items: stretch;
-  }
-
-  .search-section {
-    width: 100%;
   }
 
   #search {
@@ -921,26 +967,15 @@ MOBILE
   .filter-buttons {
     overflow-x: auto;
     flex-wrap: nowrap;
-    padding-bottom: 5px;
   }
-
-  /* Table */
 
   table {
     min-width: 800px;
   }
 
-  /* Forms */
-
   .form-grid {
     grid-template-columns: 1fr;
   }
-
-  .full-width {
-    grid-column: auto;
-  }
-
-  /* Profile */
 
   .stats {
     grid-template-columns: 1fr;
@@ -950,71 +985,65 @@ MOBILE
     grid-template-columns: 1fr;
   }
 
-  /* Modals */
-
   .modal-card {
     width: 95%;
     max-height: 90vh;
     overflow-y: auto;
   }
-
-  .modal-head {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .modal-head .close {
-    position: absolute;
-    right: 25px;
-    top: 20px;
-  }
-
-  .action-buttons {
-    gap: 6px;
-  }
-
-  .profile-btn,
-  .edit-btn,
-  .delete-btn {
-    width: 36px;
-    height: 36px;
-  }
 }
-
 /* ==========================
 SMALL PHONES
 ========================== */
 
 @media (max-width: 480px) {
+  .sidebar {
+    padding: 15px 10px;
+  }
+
+  .logo {
+    margin-bottom: 15px;
+  }
+
+  .logo h2 {
+    font-size: 16px;
+  }
+
+  .logo span {
+    font-size: 11px;
+  }
+
+  nav {
+    gap: 6px;
+  }
+
+  nav a {
+    min-height: 80px;
+    padding: 8px 4px;
+    font-size: 10px;
+  }
+
+  nav a i {
+    font-size: 20px;
+  }
+
   .hero-text h1 {
-    font-size: 23px;
+    font-size: 22px;
   }
 
   .hero-subtitle {
     font-size: 10px;
   }
 
-  .logo h2 {
-    font-size: 17px;
-  }
-
-  .admin-date {
-    font-size: 12px;
+  .status-card {
+    padding: 18px;
   }
 
   .status-number {
     font-size: 28px;
   }
 
-  .status-card {
-    padding: 18px;
-  }
-
+  .modal-head,
   .modal-body {
-    padding: 18px;
-  }
-
-  .modal-head {
     padding: 18px;
   }
 
@@ -1022,34 +1051,4 @@ SMALL PHONES
     width: 70px;
     height: 70px;
   }
-
-  .profile-btn,
-  .edit-btn,
-  .delete-btn {
-    width: 34px;
-    height: 34px;
-    font-size: 13px;
-  }
-}
-
-/* ==========================
-SCROLLBAR
-========================== */
-
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #eef2f7;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #c7d2fe;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
 }
