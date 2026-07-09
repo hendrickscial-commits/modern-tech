@@ -10,8 +10,6 @@ Modern Tech Solutions HR Management System is designed to simplify day-to-day HR
 
 ---
 
----
-
 ## 📊 Dashboard
 
 The dashboard provides an overview of the organisation including:
@@ -71,8 +69,6 @@ Attendance dashboard includes:
 
 ---
 
----
-
 # 🛠 Technologies Used
 
 * HTML
@@ -89,10 +85,6 @@ Username: admin@moderntech.co.za
 
 Password: 57940
 ```
-
----
-
----
 
 # 📌 Application Modules
 
